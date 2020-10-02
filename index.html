@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Base Apparel coming soon page</title>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <!-- External CSS file link 👍 -->
   <link href="index.css" rel=stylesheet type="text/css">
-  
+
 </head>
+
 <body>
   <main class="main-content">
-    
+
     <header><img src="images/logo.svg" alt="logo" class="logo"></img></header>
     <img src="images/hero-mobile.jpg" class="hero-mobile" alt="profile-img"></img>
-      
+
     <div class="content1">
-        <h1 class="heading"><span class="firstword">We're</span><br>coming<br>soon</h1>
+      <h1 class="heading"><span class="firstword">We're</span><br>coming<br>soon</h1>
     </div>
-    
+
     <div class="content2">
       <p class="content">Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      
+
       <form>
-        <input type="text" id="email" class="email" placeholder="Email Address" pattern=" /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/" required/>
+        <input type="text" id="email" class="email" placeholder="Email Address"
+          pattern=" /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/" required />
         <img src="images/icon-error.svg" alt="error" id="error" class="error-invalid"></img>
         <button class="button" onclick=""><img src="images/icon-arrow.svg" alt="arrow-image"></img></button>
       </form>
@@ -35,46 +39,48 @@
         <p>Please provide a valid email.</p>
       </div>
     </div>
-    
+
   </main>
-    <div>
-      <img src="images/hero-desktop.jpg" alt="hero-desktop" class="hero-desktop"></img>
-    </div>
-  
+  <div>
+    <img src="images/hero-desktop.jpg" alt="hero-desktop" class="hero-desktop"></img>
+  </div>
+
   <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Akshaykumar Magrani</a>.
-      </p>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+        Mentor</a>.
+      Coded by <a href="#">Akshaykumar Magrani</a>.
+    </p>
   </footer>
   <script>
     var myInput = document.getElementById("email");
-  
+
     // When the user clicks on the password field, show the message box
-    myInput.onfocus = function() {
+    myInput.onfocus = function () {
       document.getElementById("message").style.display = "block";
       document.getElementById("error").style.display = "block";
     }
-    
+
     // When the user clicks outside of the password field, hide the message box
-    myInput.onblur = function() {
+    myInput.onblur = function () {
       document.getElementById("message").style.display = "none";
       document.getElementById("error").style.display = "none";
     }
-    
+
     // When the user starts to type something inside the password field
-    myInput.onkeyup = function() {
+    myInput.onkeyup = function () {
       // Validate email
       var pattern = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/g;
-      if(myInput.value.match(pattern)) {  
+      if (myInput.value.match(pattern)) {
         message.classList.remove("msg-invalid");
         message.classList.add("msg-valid");
         error.classList.remove("msg-invalid");
         error.classList.add("msg-valid");
       }
     }
-    </script>
-    
-  
+  </script>
+
+
 </body>
+
 </html>
